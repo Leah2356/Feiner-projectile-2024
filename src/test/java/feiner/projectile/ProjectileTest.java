@@ -1,11 +1,8 @@
 package feiner.projectile;
-
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ProjectileTest {
-
     @Test
     public void testGetX() {
         // given
@@ -18,7 +15,6 @@ class ProjectileTest {
         // then
         assertEquals(46.28, actual, 0.01);
     }
-
     @Test
     public void testGetY() {
         // given
@@ -31,12 +27,10 @@ class ProjectileTest {
         // then
         assertEquals(-7.90, actual, 0.01);
     }
-
     @Test
     public void testGetApexTime() {
         // given
         Projectile projectile = new Projectile(31, 20);
-
 
         // when
         double actual = projectile.getApexTime();
