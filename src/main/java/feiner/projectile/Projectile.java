@@ -12,6 +12,7 @@ public class Projectile {
         this.velocity = velocity;
         this.radians = Math.toRadians(angle);
     }
+
     public void setSeconds(double seconds) {
         this.seconds = seconds;
     }
@@ -24,6 +25,7 @@ public class Projectile {
         return Math.sin(radians) * velocity * seconds -
                 .5 * 9.8 * seconds * seconds;
     }
+
     /**
      * @return the time when the Projectile is at its highest point.
      */
