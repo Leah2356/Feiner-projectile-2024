@@ -31,13 +31,12 @@ public class Projectile {
      * @return the time when the Projectile is at its highest point.
      */
     public double getApexTime() {
-
         return velocity * Math.sin(radians) / 9.8;
     }
+
     /**
      * @return the highest Y value of projectile
      */
-
     public double getPeakY() {
         return (Math.pow(velocity * Math.sin(radians), 2) / 19.6);
     }
