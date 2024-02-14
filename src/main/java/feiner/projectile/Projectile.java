@@ -40,4 +40,14 @@ public class Projectile {
     public double getPeakY() {
         return (Math.pow(velocity * Math.sin(radians), 2) / 19.6);
     }
+
+    /**
+     * @return the formula for the X intercept
+     */
+    public double getInterceptX() {
+        double time = 2 * Math.sin(radians) * velocity / 9.8;
+        double interceptX = Math.cos(radians) * velocity * time;
+
+        return interceptX;
+    }
 }
