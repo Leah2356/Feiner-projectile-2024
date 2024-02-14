@@ -55,6 +55,7 @@ class ProjectileTest {
         // then
         assertEquals(57.18, actual, 0.01);
     }
+
     @Test
     public void getInterceptX() {
         // given
