@@ -43,38 +43,38 @@ public class ProjectileFrame extends JFrame {
         JLabel XLabel = new JLabel("X");
         JLabel YLabel = new JLabel("Y");
 
-        velocityField = new JTextField();
-        secondsField = new JTextField("0");
-        calculatedLabelX = new JLabel();
-        calculatedLabelY = new JLabel();
-        JLabel empty = new JLabel();
-        JButton calculateButton = new JButton("Calculate");
-        JLabel peakYLabel = new JLabel("Peak Y");
-        JLabel interceptXLabel = new JLabel("Intercept X");
-        peakY = new JLabel();
-        interceptX = new JLabel();
 
+        velocityField = new JTextField();
         add(velocityLabel);
         add(velocityField);
 
         add(angleLabel);
         add(angleSlider);
 
+        secondsField = new JTextField("0");
         add(secondsLabel);
         add(secondsField);
 
+        calculatedLabelX = new JLabel();
         add(XLabel);
         add(calculatedLabelX);
 
+        calculatedLabelY = new JLabel();
         add(YLabel);
         add(calculatedLabelY);
 
+        JLabel peakYLabel = new JLabel("Peak Y");
+        peakY = new JLabel();
         add(peakYLabel);
         add(peakY);
 
+        interceptX = new JLabel();
+        JLabel interceptXLabel = new JLabel("Intercept X");
         add(interceptXLabel);
         add(interceptX);
 
+        JLabel empty = new JLabel();
+        JButton calculateButton = new JButton("Calculate");
         add(empty);
         add(calculateButton);
 
