@@ -53,13 +53,13 @@ public class ProjectileFrame extends JFrame {
         add(secondsField);
 
         calculatedLabelX = new JLabel();
-        JLabel XLabel = new JLabel("X");
-        add(XLabel);
+        JLabel LabelX = new JLabel("X");
+        add(LabelX);
         add(calculatedLabelX);
 
         calculatedLabelY = new JLabel();
-        JLabel YLabel = new JLabel("Y");
-        add(YLabel);
+        JLabel LabelY = new JLabel("Y");
+        add(LabelY);
         add(calculatedLabelY);
 
         JLabel peakLabelY = new JLabel("Peak Y");
