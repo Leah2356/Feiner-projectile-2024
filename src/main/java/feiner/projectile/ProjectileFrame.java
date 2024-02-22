@@ -28,8 +28,6 @@ public class ProjectileFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         setLayout(new GridLayout(8, 2));
-        JLabel velocityLabel = new JLabel("Velocity");
-        JLabel angleLabel = new JLabel("Angle");
 
         angleSlider = new JSlider(JSlider.HORIZONTAL,
                 ANGLE_MIN, ANGLE_MAX, ANGLE_INIT);
@@ -39,38 +37,39 @@ public class ProjectileFrame extends JFrame {
         angleSlider.setPaintTicks(true);
         angleSlider.setPaintLabels(true);
 
-        JLabel secondsLabel = new JLabel("Seconds");
-        JLabel XLabel = new JLabel("X");
-        JLabel YLabel = new JLabel("Y");
-
 
         velocityField = new JTextField();
+        JLabel velocityLabel = new JLabel("Velocity");
         add(velocityLabel);
         add(velocityField);
 
+        JLabel angleLabel = new JLabel("Angle");
         add(angleLabel);
         add(angleSlider);
 
         secondsField = new JTextField("0");
+        JLabel secondsLabel = new JLabel("Seconds");
         add(secondsLabel);
         add(secondsField);
 
         calculatedLabelX = new JLabel();
+        JLabel XLabel = new JLabel("X");
         add(XLabel);
         add(calculatedLabelX);
 
         calculatedLabelY = new JLabel();
+        JLabel YLabel = new JLabel("Y");
         add(YLabel);
         add(calculatedLabelY);
 
-        JLabel peakYLabel = new JLabel("Peak Y");
+        JLabel peakLabelY = new JLabel("Peak Y");
         peakY = new JLabel();
-        add(peakYLabel);
+        add(peakLabelY);
         add(peakY);
 
         interceptX = new JLabel();
-        JLabel interceptXLabel = new JLabel("Intercept X");
-        add(interceptXLabel);
+        JLabel interceptLabelX = new JLabel("Intercept X");
+        add(interceptLabelX);
         add(interceptX);
 
         JLabel empty = new JLabel();
