@@ -11,9 +11,11 @@ public class ProjectileGraph extends JComponent {
         super.paintComponent(g);
         g.translate(0, getHeight());
         g.setColor(Color.BLACK);
-        int currX = (int) projectile.getX();
-        int currY = (int) projectile.getY();
+        projectile.setSeconds(0);
+
         for (int i = 0; i <= projectile.getApexTime() * 2 + 1; i++) {
+            int currX = (int) projectile.getX();
+            int currY = (int) projectile.getY();
             projectile.setSeconds(i);
             g.drawLine(currX, -currY, (int) projectile.getX(), -(int) projectile.getY());
         }
