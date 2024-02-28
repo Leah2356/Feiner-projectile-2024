@@ -21,26 +21,8 @@ public class ProjectileGraph extends JComponent {
         }
         g.setColor(Color.BLUE);
         g.fillOval((int) projectile.getInterceptX() / 2, (int) -projectile.getPeakY(), 8, 8);
-
-
-
-
-//        g.drawString("100, 100", 100, -100);
-//        g.setColor(Color.GREEN);
-//        g.drawLine(0, 0, getWidth(), -getHeight());
-//        g.drawRect(200, -200, 50, 50);
-//        g.setColor(Color.MAGENTA);
-//        g.fillRect(400, -400, 25, 25);
-//        g.setColor(Color.ORANGE);
-//        g.drawOval(200, -200, 50, 50);
-//
-//        g.fillOval(
-//                (int) projectile.getX(),
-//                (int) -projectile.getY(),
-//                10, 10);
-//
-
     }
+
     public void setProjectile(Projectile projectile) {
         this.projectile = projectile;
         // this tells the operating system to call paintComponent() again.
