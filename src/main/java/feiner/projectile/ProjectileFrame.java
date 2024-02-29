@@ -21,7 +21,7 @@ public class ProjectileFrame extends JFrame {
     private final JLabel calculatedLabelY;
     private final JLabel peakY;
     private final JLabel interceptX;
-    private ProjectileGraph graph;
+    private ProjectileGraph graph = new ProjectileGraph();;
 
     public ProjectileFrame() {
         setSize(400, 600);
@@ -86,24 +86,13 @@ public class ProjectileFrame extends JFrame {
         west.add(empty);
         west.add(calculateButton);
 
-        velocityField.getDocument().addDocumentListener(new SimpleDocumentListener() {
-            @Override
-            public void update(DocumentEvent e) {
-                createProjectile();
-            }
-        });
+        velocityField.getDocument().addDocumentListener((SimpleDocumentListener)
+                documentEvent -> createProjectile());
 
-        angleSlider.addChangeListener(new ChangeListener() {
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                createProjectile();
-            }
-        });
+        angleSlider.addChangeListener(changeEvent -> createProjectile());
 
-        calculateButton.addActionListener(e -> createProjectile());
+        calculateButton.addActionListener(actionEvent -> createProjectile());
 
-
-        graph = new ProjectileGraph();
         main.add(graph, BorderLayout.CENTER);
 
     }
@@ -112,7 +101,7 @@ public class ProjectileFrame extends JFrame {
     private void createProjectile() {
         Projectile projectile = new Projectile(
                 angleSlider.getValue(),
-                Double.parseDouble(String.valueOf(velocityField.getX()))
+                Double.parseDouble(String.valueOf(velocityField.getText()))
         );
         projectile.setSeconds(
                 Double.parseDouble(secondsField.getText())
