@@ -7,6 +7,7 @@ public class Projectile {
     private final double radians;
     private final double velocity;
     private double seconds;
+    private static final double GRAVITY = 9.8;
 
     public Projectile(double angle, double velocity) {
         this.angle = angle;
@@ -24,7 +25,7 @@ public class Projectile {
 
     public double getY() {
         return Math.sin(radians) * velocity * seconds
-                - .5 * 9.8 * seconds * seconds;
+                - (.5 * 9.8 * (seconds * seconds));
     }
 
     /**
@@ -38,15 +39,15 @@ public class Projectile {
      * @return the highest Y value of projectile
      */
     public double getPeakY() {
-        return (Math.pow(velocity * Math.sin(radians), 2) / 19.6);
+        return (Math.sin(radians) * velocity) * (Math.sin(radians) * velocity) / (GRAVITY * 2);
     }
 
     /**
      * @return the formula for the X intercept
      */
     public double getInterceptX() {
-        double time = 2 * Math.sin(radians) * velocity / 9.8;
-        double interceptX = Math.cos(radians) * velocity * time;
-        return interceptX;
+        double time = 2 * (Math.sin(radians)) * velocity / GRAVITY;
+
+        return Math.cos(radians) * velocity * time;
     }
 }
